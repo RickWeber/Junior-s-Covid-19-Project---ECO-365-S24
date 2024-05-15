@@ -7,7 +7,7 @@ library(plotly)
 library(ggplot2)
 
 # Load and preprocess data
-my_data <- read.csv("C:/Users/jnoel/OneDrive/Desktop/Covid-19 csv files/OxCGRT_compact_national_v1.csv")
+my_data <- read.csv("https://raw.githubusercontent.com/OxCGRT/covid-policy-dataset/main/data/OxCGRT_compact_national_v1.csv") # updated May 15
 my_data$Date <- ymd(my_data$Date)
 my_data <- my_data %>%
   mutate(MajorityVaccinated_numeric = ifelse(MajorityVaccinated == "V", 1,
